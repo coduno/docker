@@ -7,4 +7,5 @@ RUN curl -s https://coduno.github.io/cli/install.sh | bash -s - -y
 
 WORKDIR /run
 
-ENTRYPOINT ["/usr/local/bin/coduno", "run"]
+ENTRYPOINT ["/bin/bash", "-c", "coduno prepare > /dev/null && coduno run"]
+
