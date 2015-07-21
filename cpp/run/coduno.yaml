@@ -1,0 +1,2 @@
+prepare: ["g++ app.cpp -o app"]
+run: "./app"

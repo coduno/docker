@@ -1,0 +1,2 @@
+prepare: ["javac Application.java"]
+run: "java Application"
