@@ -1,0 +1,4 @@
+prepare:
+  - "chmod +x app.c"
+  - "gcc -g app.c -o app"
+run: "./app"
