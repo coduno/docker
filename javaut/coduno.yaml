@@ -1,6 +1,3 @@
 prepare:
-  - "mkdir -p /run/src/test/java"
-  - "mkdir -p /run/src/main/java"
   - "cp -r /tests/. /run"
-  - "cp Application.java /run/src/main/java"
 run: "JAVA_HOME=/usr gradle test"
