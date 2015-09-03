@@ -1,2 +1,1 @@
-prepare: ["chmod +x app.py"]
 run: "python2.7 app.py"
