@@ -1,1 +1,1 @@
-run: "python2.7 app.py"
+run: "python3 app.py"
