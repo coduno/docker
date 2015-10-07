@@ -1,6 +1,16 @@
-FROM coduno/base
-RUN apt-get update -y && apt-get install -y openjdk-8-jdk gradle
-RUN mkdir -p /run/src/main/java /run/src/test/java /run/build
-ADD build.gradle /run/build.gradle
-ADD coduno.yaml /run/coduno.yaml
-RUN gradle --refresh-dependencies test
+FROM maven:3.3-jdk-8
+
+MAINTAINER "Coduno <team@cod.uno>"
+
+RUN curl -s -L https://coduno.github.io/cli/install.sh | tee | bash -s - -y
+
+WORKDIR /run
+ENTRYPOINT ["/bin/bash", "-c", "coduno prepare < /dev/null > prepare.log && coduno run --stats"]
+
+ADD . /run
+RUN mvn test && rm -rf /run/src && rm -rf /run/target
+
+RUN mkdir -p /run/src/main/java /run/src/test/java
+
+CMD ["mvn", "test"]
+

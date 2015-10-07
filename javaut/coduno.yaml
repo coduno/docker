@@ -1,1 +1,1 @@
-run: "JAVA_HOME=/usr gradle test"
+run: "mvn test"
