@@ -1,0 +1,2 @@
+prepare: ["mcs application.cs"]
+run: "mono application.exe"

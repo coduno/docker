@@ -4,3 +4,9 @@ docker build -t coduno/fingerprint-cpp ./cpp
 docker build -t coduno/fingerprint-java ./java
 docker build -t coduno/fingerprint-py ./py
 docker build -t coduno/fingerprint-javaut ./javaut
+docker build -t coduno/fingerprint-js ./js
+docker build -t coduno/fingerprint-csharp ./c_sharp
+docker build -t coduno/fingerprint-go ./go
+docker build -t coduno/fingerprint-php ./php
+docker build -t coduno/fingerprint-groovy ./groovy
+docker build -t coduno/ccc_drone_simulator ./ccc_drone_simulator
